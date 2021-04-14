@@ -32,7 +32,7 @@ Destroy | DELETE | /chat/:id | Removes Chat (id) from the server
 
 User Stories: 
 
--- When the user enters localhost3000/ they will see the home page with a brief introduction along with a link to each of the chat roomson file and, a create new chat room button. 
+-- When the user enters localhost3000/(App LINK) they will see the home page with a brief introduction along with a link to each of the chat rooms on file and, a create new chat room button. 
 
 --(stretch) User will be able to create a profile , and edit only his/hers/their posts
 
