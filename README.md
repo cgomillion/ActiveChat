@@ -29,3 +29,21 @@ Create | POST | /chat | Creates chat input on server
 Edit | GET | /chat/:id/edit | Get prefilled form for user to change/edit their message
 Update | PUT/PATCH | /chat/:id | Updates the data from 'edit' on server
 Destroy | DELETE | /chat/:id | Removes Chat (id) from the server
+
+User Stories: 
+
+-- When the user enters localhost3000/ they will see the home page with a brief introduction along with a link to each of the chat roomson file and, a create new chat room button. 
+
+--(stretch) User will be able to create a profile , and edit only his/hers/their posts
+
+-- When the user clicks the create new chat room button the will be redirected to where there will be a form available to populate with their information for the new Chat Room. Along with a back button/link to go back to the home screen 
+
+-- When the user clicks the link under the corresponding chat room, they will be directed to the Index page where it lists all the message in that chat room on server. 
+
+-- When the user clicks onto a specific chat/message, they will be directed to the chat/message (id) Show page
+
+-- On the Chat Show Page the user will have the option to create new chat, edit the current message, go back to the chat room, or go back to the home screen.
+
+-- When the user clicks on the edit link the will directed to the edit page where they will be able to change a prefilled form (similiar to new chat form) about the message/chat after clicking the submit changes button
+
+-- The user will be able to navigate back from any given screen, with the home screen .
