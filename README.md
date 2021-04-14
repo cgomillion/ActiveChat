@@ -46,4 +46,16 @@ User Stories:
 
 -- When the user clicks on the edit link the will directed to the edit page where they will be able to change a prefilled form (similiar to new chat form) about the message/chat after clicking the submit changes button
 
--- The user will be able to navigate back from any given screen, with the home screen .
+-- The user will be able to navigate back from any given screen, with the home screen 
+
+MODELS:
+const topicSchema = new Schema({
+    name: {type: String, required: true },
+    description: { type: String, required: true },
+    img: String,
+});
+
+MODELS:
+const chatSchema = new Schema({
+    text: {type: String, required: true },
+});
