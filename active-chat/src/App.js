@@ -55,9 +55,9 @@ function App() {
 
       addTopic = (newTopic) => {
         const copyTopic = [...this.state.topics]
-        copyHolidays.push(newHoliday)
+        copyTopic.push(newTopic)
         this.setState({
-          holidays: copyHolidays,
+          topics: copyTopic,
         })
       }
 
@@ -136,7 +136,7 @@ function App() {
         catch(err){
           console.log('Error => ', err);
         }
-      }loggingUser = async (e) => {
+      };loggingUser = async (e) => {
     e.preventDefault()
     const url = baseUrl + '/users/login'
     const logindBody = {
@@ -182,8 +182,8 @@ function App() {
           if (response.status===200){
             const updatedTopic = await response.json()
             const findIndex = this.state.topics.findIndex(topics => topics._id === updatedtopic.data._id)
-            const copyTopics = [...this.state.holidays]
-            copyHolidays[findIndex] = updatedHoliday.data
+            const copyTopics = [...this.state.topics]
+            copyTopics[findIndex] = updatedTopics.data
             this.setState({
               holidays: copyHolidays,
               modalOpen:false
@@ -194,6 +194,23 @@ function App() {
           console.log('Error => ', err);
         }
       }
+      componentDidMount() {
+    this.getTopics()
+  }
+
+  handleChange = (e)=>{
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
+  showEditForm = (topics)=>{
+    this.setState({
+      modalOpen:true,
+      name: topic.name,
+      topicToBeEdit:topic,
+    })
+  }
 
 
       render () {
@@ -202,7 +219,7 @@ function App() {
           <div className="App">
             <Nav loggingUser={this.loggingUser} register={this.register}/>
 
-              <h1> Holidays! Celebrate! </h1>
+              <h1>Test </h1>
               <NewForm baseUrl={ baseUrl } addTopic={ this.addTopic } />
 
               <TopicsTable
@@ -232,4 +249,4 @@ function App() {
       }
     }
 
-    export default App;
+export default App;
