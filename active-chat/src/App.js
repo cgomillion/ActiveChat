@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './App.css';
 import Nav from './components/Nav'
 const SERVER = "http://127.0.0.1:8080";
-const cors = require('cors');
+// const cors = require('cors');
 app.use(cors())
 
 
@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 
-function App() {
+
     var socket = socketClient (SERVER);
     class App extends Component {
       constructor(props) {
