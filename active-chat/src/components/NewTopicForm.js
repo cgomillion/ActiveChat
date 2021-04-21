@@ -43,9 +43,9 @@ export default class NewForm extends Component {
   render () {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label htmlFor="name">Name: </label>
+        <label htmlFor="name">Name of Topic: </label>
         <input type="text" id="name" name="name" onChange={ (evt) => this.handleChange(evt) } value={ this.state.name } />
-        <input type="submit" value="Add a Reason to Celebrate" />
+        <input type="submit" value="Add a Topic to Chat About" />
       </form>
     )
   }
